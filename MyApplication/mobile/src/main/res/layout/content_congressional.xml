@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ecalo.myapplication.Congressional"
+    tools:showIn="@layout/activity_congressional">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Senate"
+        android:id="@+id/senate"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/senate1"
+        android:background="@color/party_color1"
+        android:layout_below="@+id/senate">
+
+        <ImageButton
+            android:layout_width="136dp"
+            android:layout_height="130dp"
+            android:id="@+id/senate_photo1"
+            android:src="@drawable/babs"
+            android:background="@color/party_color1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstsenator"
+            android:text="@string/senator1"
+            android:textSize="16dp"
+            android:textColor="@color/plain"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/senate2"
+        android:background="@color/party_color1"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:layout_width="136dp"
+            android:layout_height="130dp"
+            android:id="@+id/senate_photo2"
+            android:src="@drawable/diane"
+            android:background="@color/party_color1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/secondsenator"
+            android:text="@string/senator2"
+            android:textSize="16dp"
+            android:textColor="@color/plain" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/house"
+        android:text="House"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_below="@+id/senate2"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/hor"
+        android:background="@color/party_color2"
+        android:layout_below="@+id/house"
+        android:weightSum="1">
+
+        <ImageButton
+            android:layout_width="136dp"
+            android:layout_height="130dp"
+            android:id="@+id/rep_photo"
+            android:src="@drawable/dev"
+            android:background="@color/party_color2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/hor_legis"
+            android:layout_gravity="right"
+            android:layout_below="@+id/hor"
+            android:text="@string/hor1"
+            android:textSize="16dp"
+            android:textColor="@color/plain"/>
+    </LinearLayout>
+
+</RelativeLayout>

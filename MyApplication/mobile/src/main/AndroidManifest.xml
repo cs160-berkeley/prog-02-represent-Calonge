@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ecalo.myapplication">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Congressional"
+            android:label="@string/title_activity_congressional"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.myapplication.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Detailed"
+            android:label="@string/title_activity_detailed"
+            android:parentActivityName=".Congressional"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ecalo.myapplication.Congressional" />
+        </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="321486a1057d4b6d5c342e67b21d663de3addd86" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
